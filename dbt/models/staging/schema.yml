@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: stg_weather_daily
+    description: Cleaned and typed daily weather records from the raw weather table.
+    columns:
+      - name: city_name
+        description: Name of the city.
+        tests:
+          - not_null
+
+      - name: date
+        description: Logical weather observation date.
+        tests:
+          - not_null
+
+      - name: latitude
+        description: Latitude of the city.
+        tests:
+          - not_null
+
+      - name: longitude
+        description: Longitude of the city.
+        tests:
+          - not_null
+
+      - name: temperature_2m_max
+        description: Maximum daily temperature at 2 metres.
+
+      - name: temperature_2m_min
+        description: Minimum daily temperature at 2 metres.
+
+      - name: temperature_2m_mean
+        description: Mean daily temperature at 2 metres.
+
+      - name: precipitation_sum
+        description: Total daily precipitation.
+
+      - name: wind_speed_10m_max
+        description: Maximum daily wind speed at 10 metres.

@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: fct_city_daily
+    description: Daily weather summary by city for business reporting and analysis.
+    columns:
+      - name: city_name
+        description: City name.
+        tests:
+          - not_null
+
+      - name: date
+        description: Weather observation date.
+        tests:
+          - not_null
+
+      - name: avg_temperature_max
+        description: Average maximum temperature for the city and date.
+
+      - name: avg_temperature_min
+        description: Average minimum temperature for the city and date.
+
+      - name: avg_temperature_mean
+        description: Average mean temperature for the city and date.
+
+      - name: total_precipitation
+        description: Total precipitation for the city and date.
+
+      - name: max_wind_speed
+        description: Maximum recorded wind speed for the city and date.
